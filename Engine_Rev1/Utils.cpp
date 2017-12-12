@@ -3,6 +3,9 @@
 
 #include <sstream>
 #include <ostream>
+#include <iostream>
+
+
 void Utils::Log(Utils::LogType logType, string message)
 {
 	string prefix;
@@ -32,6 +35,15 @@ void Utils::Log(Utils::LogType logType, string message)
 
 	std::copy(message.begin(), message.end(), wideMessage.begin());
 	OutputDebugString(wideMessage.c_str());
+	cout << message;
 }
+void Utils::Log(string message)
+{
+	std::wstring wideMessage(message.length(), L' ');
+	//Copy String to wideString for Windows
 
+	std::copy(message.begin(), message.end(), wideMessage.begin());
+	OutputDebugString(wideMessage.c_str());
+	cout << message;
+}
 

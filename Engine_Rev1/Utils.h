@@ -15,7 +15,7 @@ public:
 	};
 
 	static void Log(LogType logtype, string message);
-
+	static void Log(string message);
 protected:
 private:
 
