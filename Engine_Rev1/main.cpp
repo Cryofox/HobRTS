@@ -1,10 +1,8 @@
 #include <iostream>
 #include <string>
 
-
 #include "Utils.h"
 #include <sstream>
-
 //OpenGL Mandatory Prereq Header
 #include <GL/glew.h>
 //OpenGL windowing Library
@@ -13,9 +11,7 @@
 #include <glm/glm.hpp>
 
 using namespace std;
-
 using LogType = Utils::LogType;
-
 int main()
 {
 	//Initialize GLFW Init

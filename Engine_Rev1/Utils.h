@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
-
+#include <Windows.h>
+#include <sstream>
+#include <ostream>
+#include <iostream>
 using namespace std;
 
 class Utils

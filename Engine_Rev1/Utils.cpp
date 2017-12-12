@@ -1,10 +1,4 @@
 #include "Utils.h"
-#include <Windows.h>
-
-#include <sstream>
-#include <ostream>
-#include <iostream>
-
 
 void Utils::Log(Utils::LogType logType, string message)
 {
