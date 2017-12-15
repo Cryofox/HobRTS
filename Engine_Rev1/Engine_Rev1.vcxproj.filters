@@ -19,6 +19,36 @@
     <Filter Include="Header Files\Engine">
       <UniqueIdentifier>{637d4d8f-b2ab-4254-8dc1-7de236264af4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine\Models">
+      <UniqueIdentifier>{0b34ab91-4c98-469e-9298-930becdcc02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Meshes">
+      <UniqueIdentifier>{90d159ee-1c2c-40ec-828b-51eaf9e649c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Scenes">
+      <UniqueIdentifier>{d842c6da-c244-407e-9b68-029c0bcbee00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Cameras">
+      <UniqueIdentifier>{d67c700c-a89a-481e-95ca-570f81973815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Actors">
+      <UniqueIdentifier>{a0b8c149-dccf-4845-a7cc-33a0c884e189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\PhysX">
+      <UniqueIdentifier>{604922ea-f145-4059-bb87-97b285f6506e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HobSurvival">
+      <UniqueIdentifier>{b60187bf-cb68-484e-92e1-80da664afcb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Scenes">
+      <UniqueIdentifier>{cbdb84f2-8264-45d2-82b2-d8743c525f3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{28725773-d32f-4576-a201-bfe062134517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\SimpleShader">
+      <UniqueIdentifier>{28575ab7-5597-4b6d-a982-fcbaf8eb01e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,10 +57,51 @@
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="ParasyteEngine.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleScene.cpp">
+      <Filter>Source Files\Engine\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utils.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="ProceduralMesh.h">
+      <Filter>Header Files\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMesh.h">
+      <Filter>Header Files\Engine\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files\Engine\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\Engine\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Engine\Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="ParasyteEngine.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleScene.h">
+      <Filter>Header Files\Engine\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\SimpleVertexShader.vert">
+      <Filter>Resource Files\Shaders\SimpleShader</Filter>
+    </None>
+    <None Include="Shaders\SimpleFragmentShader.frag">
+      <Filter>Resource Files\Shaders\SimpleShader</Filter>
+    </None>
   </ItemGroup>
 </Project>

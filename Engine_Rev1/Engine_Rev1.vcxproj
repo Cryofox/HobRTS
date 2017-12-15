@@ -89,14 +89,19 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GL;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GLFW;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ShowProgress>LinkVerbose</ShowProgress>
       <AdditionalLibraryDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glew;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glfw;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)Shaders" "$(TargetDir)\Shaders\" /S /Y
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -106,13 +111,18 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GL;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GLFW;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glew;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glfw;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)Shaders" "$(TargetDir)\Shaders\" /S /Y
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -124,6 +134,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GL;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GLFW;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -132,8 +143,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ShowProgress>LinkVerbose</ShowProgress>
       <AdditionalLibraryDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glew;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glfw;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)Shaders" "$(TargetDir)\Shaders\" /S /Y
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -145,6 +160,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GL;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\GLFW;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\include\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,15 +168,34 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glew;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib\glfw;C:\Users\Ryder Stancescu\Desktop\HobRTS\Engine_Rev1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)Shaders" "$(TargetDir)\Shaders\" /S /Y
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ParasyteEngine.cpp" />
+    <ClCompile Include="TriangleScene.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="OpenGL.h" />
+    <ClInclude Include="ParasyteEngine.h" />
+    <ClInclude Include="ProceduralMesh.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SkinnedMesh.h" />
+    <ClInclude Include="TriangleScene.h" />
     <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\SimpleFragmentShader.frag" />
+    <None Include="Shaders\SimpleVertexShader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
